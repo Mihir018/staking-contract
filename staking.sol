@@ -36,7 +36,7 @@ contract StakingContract {
         owner = msg.sender;
     }
 
-    function mint(address _to, uint256 _amount) external onlyOwner {
+    function mint(address _to, uint256 _amount) external {
         balanceOf[_to] += _amount;
         totalSupply += _amount;
         emit TokensMinted(_to, _amount);
